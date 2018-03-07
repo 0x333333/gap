@@ -1,21 +1,21 @@
 (function(){
   'use strict';
 
-  angular.module('about')
-         .service('aboutService', ['$q', AboutService]);
+  angular.module('feedback')
+         .service('feedbackService', ['$q', FeedbackService]);
 
   /**
-   * About DataService
+   * Feedback DataService
    * Uses embedded, hard-coded data model; acts asynchronously to simulate
    * remote data service call(s).
    *
    * @returns {{loadContent: Function}}
    * @constructor
    */
-  function AboutService($q){
+  function FeedbackService($q){
     var data = {
-      title: 'Hello Material World',
-      description: 'This is a ready-to-use AngularJS starter app based on Google Material Design. It uses Angular Material components. If you want to edit this text, it is currently hardcoded in the AboutService.js file, simulating an async load.'
+      title: 'Prad Pitt',
+      description: 'William Bradley Pitt is an American actor and producer. He has received multiple awards and nominations including an Academy Award as producer under his own company Plan B Entertainment.'
     };
 
     // Promise-based API

@@ -15,6 +15,11 @@
   function MenuService($q){
     var menuItems = [
       {
+        title: 'Feedback',
+        href: '#/feedback',
+        colorHex: '21909E'
+      },
+      {
         title: 'About',
         href: '#/about',
         colorHex: '21909E'

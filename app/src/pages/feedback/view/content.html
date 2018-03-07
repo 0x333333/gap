@@ -1,0 +1,63 @@
+<!-- <md-icon md-svg-icon="svg-1" class="avatar"></md-icon> -->
+<md-button class="md-icon-button user-logo" style="margin: 0 6px;  min-width: 0;  width: 80px;  border-radius: 50%; height: 80px; padding: 0;">
+  <img class="logo-image" src="http://webiconspng.com/wp-content/uploads/2017/09/Brad-Pitt-PNG-Image-49881.png">
+</md-button>
+<h2 class="md-title">{{page.content.title}}</h2>
+<p class="md-subhead">{{page.content.description}}</p>
+
+<md-button class="md-raised md-primary md-cornered" ng-click="showFeedbackForm()">Start Feedback</md-button>
+
+<md-button class="contact" md-no-ink ng-click="page.showContactOptions($event)" aria-label="Share">
+  <md-tooltip>Share</md-tooltip>
+  <md-icon md-svg-icon="share"></md-icon>
+</md-button>
+
+<div ng-if="page.showFeedbackForm">
+	<div class="overview feedbackForm">
+		<md-toolbar class="md-primary">
+	    <div class="md-toolbar-tools">
+	      <h2 class="md-title">Overview</h2>
+	    </div>
+	  </md-toolbar>
+		
+		<md-content flex layout-padding>
+			<div layout="row" layout-xs="column">
+			  <div flex>
+			    <form>
+						<textarea ng-model="data.overview" ng-change="changed(0)">
+						</textarea>
+					</form>
+			  </div>
+			  <div flex ng-show="data.overviewSuggestion">
+			    <md-button class="md-raised md-primary md-cornered" ng-click="acceptSuggestion()">Accept Suggestion</md-button>
+			    <p class="suggestion-box" ng-bind-html="data.overviewSuggestion" contenteditable></p>
+			  </div>
+			</div>
+		</md-content>
+		<md-button class="md-raised md-primary md-cornered" ng-click="next()">Next</md-button>
+	</div>
+
+	<div class="details feedbackForm" ng-if="page.showDetails">
+		<md-toolbar class="md-primary">
+	    <div class="md-toolbar-tools">
+	      <h2 class="md-title">Details - Pros & Cons</h2>
+	    </div>
+	  </md-toolbar>
+		
+		<md-content flex layout-padding>
+			<div layout="row" layout-xs="column">
+			  <div flex>
+			    <form>
+						<textarea ng-model="data.details" ng-change="changed(1)">
+						</textarea>
+					</form>
+			  </div>
+			  <div flex>
+			    <p ng-show="data.detailsSuggestion" class="suggestion-box" ng-bind-html="data.detailsSuggestion"></p>
+					<md-button class="md-raised md-primary md-cornered" ng-show="data.detailsSuggestion" ng-click="acceptDetailsSuggestion()">Accept Suggestion</md-button>
+			  </div>
+			</div>
+		</md-content>
+		<md-button class="md-raised md-primary md-cornered" ng-click="corrected2?showConfirm($event):submit()">Submit</md-button>
+	</div>
+</div>

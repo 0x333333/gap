@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" >
   <head>
-    <title>Angular Material Seed</title>
+    <title>Genderless Hire app</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic'>
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="assets/app.css"/>
+    <link rel="stylesheet" href="assets/highlight.css"/>
 
     <!-- Remove this when building your app -->
     <link rel="stylesheet" href="assets/demo.css"/>
@@ -57,7 +58,7 @@
             <md-icon md-svg-icon="menu" ></md-icon>
           </md-button>
         </div>
-        <h1 flex-gt-sm>Angular Material Seed</h1>
+        <h1 flex-gt-sm>Genderless Hire app</h1>
         <div class="menu" hide-sm hide-xs>
           <md-button
             ng-href="{{menuItem.href}}"
@@ -93,10 +94,15 @@
     <script src="./src/menu/MenuController.js"></script>
     <script src="./src/menu/MenuService.js"></script>
 
-    <script src="./src/pages/about/About.js"></script>
+    <script src="./src/pages/feedback/Feedback.js"></script>
+    <script src="./src/pages/feedback/FeedbackRoute.js"></script>
+    <script src="./src/pages/feedback/FeedbackController.js"></script>
+    <script src="./src/pages/feedback/FeedbackService.js"></script>
+    
+<!--     <script src="./src/pages/about/About.js"></script>
     <script src="./src/pages/about/AboutRoute.js"></script>
     <script src="./src/pages/about/AboutController.js"></script>
-    <script src="./src/pages/about/AboutService.js"></script>
+    <script src="./src/pages/about/AboutService.js"></script> -->
 
     <script src="./src/pages/purpose/Purpose.js"></script>
     <script src="./src/pages/purpose/PurposeRoute.js"></script>
@@ -105,7 +111,8 @@
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'ngAnimate', 'menu', 'about', 'purpose'])
+              // .module('starterApp', ['ngMaterial', 'ngAnimate', 'menu', 'feedback', 'about', 'purpose'])
+              .module('starterApp', ['ngMaterial', 'ngAnimate', 'menu', 'feedback', 'purpose'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider

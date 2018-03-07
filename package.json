@@ -18,5 +18,8 @@
     "postinstall": "bower update",
     "prestart": "npm update",
     "test": "protractor ./e2e/protractor.conf.js"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
   }
 }
