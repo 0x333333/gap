@@ -170,7 +170,11 @@
       s = highlight_gendered(s);
     }
 
-    return s.replaceAll('\n', '<br>').replaceAll(' ', '&nbsp;&nbsp;');
+    if (with_highlights)
+      return s.replaceAll('\n', '<br>');
+    else
+      return s;
+    // return s.replaceAll('\n', '<br>');
   }
 
   function highlight_gendered(s) {

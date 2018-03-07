@@ -48,7 +48,7 @@ textarea {
   margin: 60px 0;
 }
 
-.suggestion-box {
+#bodydesc {
   width: 90%;
   border: none;
   height: 200px;

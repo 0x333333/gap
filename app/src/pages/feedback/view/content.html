@@ -1,10 +1,11 @@
 <!-- <md-icon md-svg-icon="svg-1" class="avatar"></md-icon> -->
-<md-button class="md-icon-button user-logo" style="margin: 0 6px;  min-width: 0;  width: 80px;  border-radius: 50%; height: 80px; padding: 0;">
+<!-- <md-button class="md-icon-button user-logo" style="margin: 0 6px;  min-width: 0;  width: 80px;  border-radius: 50%; height: 80px; padding: 0;">
   <img class="logo-image" src="http://webiconspng.com/wp-content/uploads/2017/09/Brad-Pitt-PNG-Image-49881.png">
 </md-button>
 <h2 class="md-title">{{page.content.title}}</h2>
-<p class="md-subhead">{{page.content.description}}</p>
+<p class="md-subhead">{{page.content.description}}</p> -->
 
+<h2 class="md-title">Enter your interview notes</h2>
 <md-button class="md-raised md-primary md-cornered" ng-click="showFeedbackForm()">Start Feedback</md-button>
 
 <md-button class="contact" md-no-ink ng-click="page.showContactOptions($event)" aria-label="Share">
@@ -30,7 +31,9 @@
 			  </div>
 			  <div flex ng-show="data.overviewSuggestion">
 			    <md-button class="md-raised md-primary md-cornered" ng-click="acceptSuggestion()">Accept Suggestion</md-button>
-			    <p class="suggestion-box" ng-bind-html="data.overviewSuggestion" contenteditable></p>
+			    <div id="bodydesc" style="height: 200px; overflow-y: scroll;">
+				    <p class="suggestion-box" ng-bind-html="data.overviewSuggestion" contenteditable></p>
+					</div>
 			  </div>
 			</div>
 		</md-content>
