@@ -46,6 +46,10 @@
       self.showDetails = false;
     }
 
+    $scope.refresh = function() {
+      location.reload();
+    }
+
     $scope.acceptSuggestion = function() {
       self.corrected = true;
       $scope.data.overview = convert($scope.data.overview, false);
