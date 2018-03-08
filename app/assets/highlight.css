@@ -14,7 +14,7 @@
   background-color: #0ff;
 }
 .changetext {
-  background-color:#ababab;
+  background-color: skyblue;
 }
 h1 {
   font-size:30px !important;
@@ -42,6 +42,7 @@ textarea {
   height: 300px;
   border: 1px solid lightgrey;
   box-shadow: 0 0 5px #719ECE;
+  font-size: 18px;
 }
 
 .feedbackForm {
@@ -60,6 +61,7 @@ textarea {
   height: 260px;
   border: 1px solid lightgrey;
   box-shadow: 0 0 10px #719ECE;
+  font-size: 18px;
 }
 
 .user-log{

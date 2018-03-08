@@ -58,7 +58,8 @@
       console.log($scope.data.overviewSuggestion)
       if ($scope.data.overview == $scope.data.overviewSuggestion) {
         $scope.data.overviewSuggestion = false;
-      } else {
+      }
+      if ($scope.data.overviewSuggestion.indexOf('highlighttext') != -1) {
         self.showReason = true;
       }
     }
@@ -73,7 +74,8 @@
       if (!self.corrected) {
         suggest = convert($scope.data.overview, true);
         console.log(suggest);
-        $scope.data.overviewSuggestion = $sce.trustAsHtml(suggest);
+        if ($scope.data.overview !== suggest)
+          $scope.data.overviewSuggestion = $sce.trustAsHtml(suggest);
         self.corrected = true;
       } else {
         self.showDetails = true;
@@ -187,7 +189,7 @@
   function highlight_gendered(s) {
     var regexstr = '';
     // TODO: Make accents work
-    var others = ['girl[a-z]*',
+    var others = ['girl[a-z]*', 'Stephanie',
         'boy[a-z]*', 'female[a-z]*', 'male',
         'fianc(e|&eacute;|é)e?', 'husband',
         'wife', 'wive', 'actor', '[a-z]*ess(es)?', '[a-z]*ster', 'ms',
