@@ -27,6 +27,7 @@
     self.showDetails = false;
     self.corrected = false;
     self.corrected2 = false;
+    self.showReason = false;
     $scope.data = {};
     $scope.data.overview = "Leave your feed back here. She likes it.";
     $scope.data.details = "Leave your feed back here. She likes it.";
@@ -51,6 +52,7 @@
       $scope.data.overviewSuggestion = $sce.trustAsHtml(convert($scope.data.overview, true));
       console.log($scope.data.overview)
       console.log($scope.data.overviewSuggestion)
+      self.showReason = true;
       if ($scope.data.overview == $scope.data.overviewSuggestion) {
         $scope.data.overviewSuggestion = false;
       }

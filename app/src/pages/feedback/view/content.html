@@ -30,13 +30,16 @@
 					</form>
 			  </div>
 			  <div flex ng-show="data.overviewSuggestion">
-			    <md-button class="md-raised md-primary md-cornered" ng-click="acceptSuggestion()">Accept Suggestion</md-button>
-			    <div id="bodydesc" style="height: 200px; overflow-y: scroll;">
+			    <span>
+			    	<md-button class="md-raised md-primary md-cornered" ng-click="acceptSuggestion()">Accept Suggestion</md-button>
+			    </span>
+			    <div id="bodydesc" style="overflow-y: scroll;">
 				    <p class="suggestion-box" ng-bind-html="data.overviewSuggestion" contenteditable></p>
 					</div>
 			  </div>
 			</div>
 		</md-content>
+		<p id="warning" ng-if="page.showReason">Your feedback contains potentially gendered language which we can't correct automatically. Please take a look and make any necessary changes.</p>
 		<md-button class="md-raised md-primary md-cornered" ng-click="next()">Next</md-button>
 	</div>
 

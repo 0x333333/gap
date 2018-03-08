@@ -39,7 +39,7 @@ textarea {
   width: 90%;
   margin: 1em;
   border: none;
-  height: 250px;
+  height: 300px;
   border: 1px solid lightgrey;
   box-shadow: 0 0 5px #719ECE;
 }
@@ -48,10 +48,15 @@ textarea {
   margin: 60px 0;
 }
 
+#warning {
+  color: crimson;
+}
+
 #bodydesc {
   width: 90%;
+  margin-top: 10px;
   border: none;
-  height: 200px;
+  height: 260px;
   border: 1px solid lightgrey;
   box-shadow: 0 0 10px #719ECE;
 }
