@@ -29,8 +29,8 @@
     self.corrected2 = false;
     self.showReason = false;
     $scope.data = {};
-    $scope.data.overview = "Leave your feed back here. She likes it.";
-    $scope.data.details = "Leave your feed back here. She likes it.";
+    $scope.data.overview = "";
+    $scope.data.details = "";
     $scope.data.overviewSuggestion = undefined;
 
     feedbackService
