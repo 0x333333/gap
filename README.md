@@ -1,19 +1,6 @@
-# Angular Material Seed
+# GAP
 
-This project is a *seed* for AngularJS Material Design applications. 
-
-The project contains a sample AngularJS application built on Google's Material Design specification, and is preset to install the AngularJS framework and a bunch of development and testing tools for instant web development gratification.
-
-This sample application is intended to be useful as both a learning tool and a skeleton application for a typical [AngularJS Material](http://material.angularjs.org/) web app: comprised of a top navigation header area and a content area. You can use it to quickly bootstrap your AngularJS webapp projects and dev
-environment for these projects.
-
-### How does it look?
-
-Below is a screenshot of the Starter-App:
-
-<br/>
-
-![material-ui](material-ui.png)
+This project is a hackathon project for [Bay Area Hackathon](https://sites.google.com/corp/google.com/bayareahackathon/home?authuser=0).
 
 ## Getting Started
 
@@ -26,14 +13,13 @@ We also use a number of node.js tools to initialize and test the project. You mu
 
 #### Clone The App
 
-To get you started you can simply clone `master` branch from the
-[Angular Material Seed](https://github.com/ritenv/angular-material-seed) repository and install the dependencies:
+To get you started you can simply clone `master` branch from the epository and install the dependencies:
 
 Clone the repository using [git][git]:
 
 ```
-git clone https://github.com/ritenv/angular-material-seed.git
-cd angular-material-seed
+git clone https://github.com/0x333333/gap.git
+cd gap
 ```
 
 #### Installing Dependencies
@@ -55,45 +41,18 @@ folders in your project.
 * `node_modules` - contains the npm packages for the tools we need
 * `app/bower_components` - contains the AngularJS framework files
 
-### Run End-to-End Tests
-
-To run your e2e tests your should install and configure Protractor and the Selenium WebServer. These are already specified as npm dependencies within `package.json`. Simply run these terminal commands:
+### Run 
 
 ```console
 npm install -g live-server
 npm update
-webdriver-manager update
 ```
 
-Your can read more details about Protractor and e2e here: http://angular.github.io/protractor/#/ for more details on Protractor.
-
- 1. Start your local HTTP Webserver: `live-server` or `http-server`.
+Start your local HTTP Webserver: `live-server` or `http-server`.
 
 ```console
 cd ./app; live-server;
 ```
-
-> Note: since `live-server` is working on port 8080, we configure the `protractor.conf.js` to use
-`baseUrl: 'http://localhost:8080'`
-
- 2. In another tab, start a Webdriver instance:
- 
-```console
-webdriver-manager start
-```
-
->This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test
-will send requests to this server to control a local browser. You can see information about the
-status of the server at `http://localhost:4444/wd/hub`. If you see errors, verify path in
-`e2e-tests/protractor.conf.js` for `chromeDriver` and `seleniumServerJar` to your local file system.
-
- 3. Run your e2e tests using the `test` script defined in `package.json`:
- 
-```console
-npm test
-```
-
-> This uses the local **Protractor** installed at `./node_modules/protractor`
 
 ## Directory Layout
 
@@ -125,8 +84,6 @@ For more information on Angular Material, check out https://material.angularjs.o
 
 ## Credits
 
-This starter kit is built upon the original starter app provided by <code>angular/material-start</code> located at <a href="https://github.com/angular/material-start" target="_blank">angular/material-start</a>. The primary target of this seed app is to enhance the UI to match the Material Design specification.
-
-## Background
-
-**Angular Material Seed** is being developed by [@ritenv](http://twitter.com/@ritenv) as a hobby project. If you have any ideas, suggestions or things you'd like to see in this app, PM me directly at [@ritenv](http://twitter.com/@ritenv).
+- Zhipeng
+- Ben
+- Jana
